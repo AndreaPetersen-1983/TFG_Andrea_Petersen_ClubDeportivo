@@ -1,0 +1,71 @@
+/* === MENÚ UNIVERSAL CON HAMBURGUESA === */
+header {
+  background-color: #064C88;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  display: block;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #003f6b;
+  border-radius: 5px;
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background-color: #064C88;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
